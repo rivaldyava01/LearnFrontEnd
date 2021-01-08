@@ -47,7 +47,7 @@
                     <img src='img/logo.png' class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <button class="btn btn-warning btn-sm" style="padding: 10px 32%;" onclick="myFunction()">Reserve Table</button>
+                    <a class="btn btn-warning btn-sm" style="padding: 10px 32%;" role="button" href="#reservecard">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -109,12 +109,30 @@
                     <dl class="row">
                         <dd class="col-md-3">Number Of Guest</dd>
                         <dd class="col-md-9">
-                            <input class="col-1" type="radio">1 
-                            <input class="col-1" type="radio">2 
-                            <input class="col-1" type="radio">3 
-                            <input class="col-1" type="radio">4 
-                            <input class="col-1" type="radio">5 
-                            <input class="col-1" type="radio">6 
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="guest" id="guest1" value="1">
+                                <label class="form-check-label" for="guest1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="guest" id="guest2" value="2">
+                                <label class="form-check-label" for="guest2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="guest" id="guest3" value="2">
+                                <label class="form-check-label" for="guest3">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="guest" id="guest4" value="4">
+                                <label class="form-check-label" for="guest4">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="guest" id="guest5" value="5">
+                                <label class="form-check-label" for="guest5">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="guest" id="guest6" value="6">
+                                <label class="form-check-label" for="guest6">6</label>
+                              </div>
                         </dd>
                         <dd class="col-md-3">Date and Time</dd>
                         <dd class="col-md-9">
@@ -130,7 +148,7 @@
                             </form>
                         </dd>
                         <dd class="col-6 offset-md-3 col-md-10">
-                            <button type="submit" class="btn btn-primary btn-sm">Reserve</button>
+                            <a type="submit" class="btn btn-primary btn-sm" role="button">Reserve</a>
                         </dd>
                     </dl>
                 </div>
@@ -186,13 +204,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        function myFunction() {
-          var elmnt = document.getElementById("reservecard");
-          elmnt.scrollIntoView();
-        }
-    </script>
-
 </body>
 
 </html>
