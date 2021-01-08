@@ -1,7 +1,7 @@
 # LearnFrontEnd
 
 # Starting Project
-1. git Clone git@github.com:rivaldyava01/LearnFrontEnd.git
+1. git clone git@github.com:rivaldyava01/LearnFrontEnd.git
 2. npm install
 
 # Running Project
