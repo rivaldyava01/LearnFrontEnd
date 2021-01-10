@@ -10,10 +10,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
   
     <!-- Bootstrap CSS -->
-    <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -32,8 +32,8 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
-                <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                <span class="navbar-text" >
+                    <a role="button" id="loginBtn">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -88,7 +88,7 @@
                     <img src='img/logo.png' class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-block btn-warning btn-sm" role="button" data-target="#reservecard" data-toggle="modal" data-html="true" title="Or Call us at  +852 12345678" data-placement="bottom">Reserve Table</a>
+                    <a class="btn btn-block btn-warning btn-sm" role="button" title="Or Call us at  +852 12345678" id="reserveBtn">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
     <div class="container">
         <div class="row row-content">
             <div class="col">
-                <div id="myCarousel" class="carousel slide" data-ride="caraosel">
+                <div id="myCarousel" class="carousel" data-ride="caraosel">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappiza">
@@ -186,7 +186,7 @@
             </div>
         </div>
 
-        <div class="modal fade" id="reservecard" role="dialog">
+        <div class="modal fade" id="reserveModal" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -309,6 +309,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 
 
     <!-- script tooltip -->
@@ -317,25 +318,6 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script> -->
-
-    <script>
-        $(document).ready(function(){
-            $("#myCarousel").carousel({interval: 2000});
-            $("#carouselButton").click(function(){
-                if($("#carouselButton").children("span").hasClass('fa-pause')){
-                    $("#myCarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#myCarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');
-                }
-            });
-        });
-    </script>
-
 </body>
 
 </html>
